@@ -6,35 +6,38 @@
         <h3>Albums</h3>
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <table class="table table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th>#id</th>
-                            <th>userId</th>
-                            <th>Título</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% result.selected.forEach(album => { %>
-                        <tr>
-                            <td><%= album.id %></td>
-                            <td><%= album.userId %></td>
-                            <td><%= album.title %></td>
-                        </tr>
-                        <% }) %>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th>#id</th>
+                                <th>userId</th>
+                                <th>Título</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% result.selected.forEach(album => { %>
+                            <tr>
+                                <td><%= album.id %></td>
+                                <td><%= album.userId %></td>
+                                <td><%= album.title %></td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <% if(result.next) { %>
-                    <a href="/albums/<%= result.page + 1 %>" class="btn btn-dark" style="float: right;">Next -></a>
+                <a href="/albums/<%= result.page + 1 %>" class="btn btn-dark" style="float: right;">Next -></a>
                 <% } %>
                 <% if(result.page >= 2) { %>
-                    <a href="/albums/<%= result.page - 1 %>" class="btn btn-dark" style="float: left;"><- Previd</a>
-                <% } %>
+                <a href="/albums/<%= result.page - 1 %>" class="btn btn-dark" style="float: left;">
+                    <- Previd</a>
+                        <% } %>
             </div>
         </div>
     </div>

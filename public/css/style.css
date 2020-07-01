@@ -18,6 +18,10 @@ input{
     padding: 7px;
 }
 
+table{
+    width: 1110px !important;
+}
+
 /* Index*/
 .initialButton{
     width: 100%;
