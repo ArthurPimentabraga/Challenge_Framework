@@ -1,0 +1,60 @@
+body{
+    background-color: #eceff1;
+}
+
+main{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* General */
+.container > h3{
+    margin: 30px 0px;
+}
+
+input{
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+/* Index*/
+.initialButton{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+
+    color: #353535;
+    
+    border: 2px solid #353535;
+    border-radius: 8px;
+    background-color: transparent; 
+
+    display:table;
+}
+
+.initialButton > p{
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.initialButton:hover{
+    cursor: pointer;
+    font-weight: bold;
+
+    -webkit-box-shadow: 5px 5px 21px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 21px -10px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 21px -10px rgba(0,0,0,0.75);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/* TO-DOs Page */
+input[type=checkbox]{
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,33 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<main>
+    <div class="container">
+        <h3>Escolha uma das opções para visualizar a tabela respectiva</h3>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4">
+                <a href="/posts">
+                    <div class="initialButton">
+                        <p>Postagens</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <a href="/albums">
+                    <div class="initialButton">
+                        <p>Albums</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <a href="/todos">
+                    <div class="initialButton">
+                        <p>TO-DOs</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('./partials/footer.ejs') %>
