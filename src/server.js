@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const axios = require('axios');
 
 // Controllers
 const postsController = require('./controllers/postsController');
@@ -23,6 +24,17 @@ app.get("/", (req, res) => {
 });
 
 app.use("/", postsController);
+
+app.get('/post/userId', (req, res) => {
+    let user = req.query.searchUserId;
+
+    axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${user}`).then(posts => {
+        res.render('postsUserId', { posts: posts.data });
+    }).catch(error => {
+        console.log(error);
+    });
+})
+
 app.use("/", albumsController);
 app.use("/", todosController);
 
@@ -32,7 +44,7 @@ app.listen(8080, (error) => {
         console.log("Error when starding the server! :(");
         console.log(error);
     }
-    else{
+    else {
         console.log("Server started successfully! :)");
     }
 })

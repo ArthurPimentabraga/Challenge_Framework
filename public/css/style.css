@@ -20,6 +20,25 @@ input{
 
 table{
     width: 1110px !important;
+    height: 100%;
+}
+
+.formFilter{
+    margin-bottom: 20px !important; 
+    text-align: left !important;
+}
+
+/* NavBar */
+nav{
+    background-color: #353535;
+}
+
+nav a{
+    color: #ffffff;
+}
+
+nav a:hover{
+    color: #c9c9c9;
 }
 
 /* Index*/
@@ -61,4 +80,22 @@ a:hover{
 input[type=checkbox]{
     width: 30px;
     height: 30px;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 20vh;
+    background-color: #353535;
+    color: #ffffff;
+
+    display:table;
+
+    position: relative;
+}
+
+footer p{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
 }
